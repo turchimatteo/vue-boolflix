@@ -1,7 +1,7 @@
 <template>
     <main>
         <h2>Film:</h2>
-        <Movie v-for="movie in movieList" :key="movie.id" />
+        <Movie v-for="movie in movieList" :key="movie.id" :details="movie"/>
     </main>
 </template>
 <script>
