@@ -1,11 +1,14 @@
 <template>
     <div class="series">
+        <div>
+            <img :src="(`https://image.tmdb.org/t/p/w342${details.poster_path}`)" :alt="details.poster_path">
+        </div>
         <div>Titolo: {{ details.name }}</div>
         <div>Titolo originale: {{ details.original_name }}</div>
-        <div>
+        <div class="flags">
             Lingua:
             <span v-if="pngFlag.includes(details.original_language)">
-                <img class="flags" :src="require(`../assets/img/${details.original_language}.png`)" :alt="details.original_language">
+                <img :src="require(`../assets/img/${details.original_language}.png`)" :alt="details.original_language">
             </span> 
             <span v-else>{{ details.original_language }}</span>
         </div>
@@ -33,7 +36,7 @@ export default {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    img {
+    .flags img {
         width: 40px;
     }
 }
