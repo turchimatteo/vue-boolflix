@@ -1,7 +1,7 @@
 <template>
-    <div class="movie">
-        <div>Titolo: {{ details.title }}</div>
-        <div>Titolo originale: {{ details.original_title }}</div>
+    <div class="series">
+        <div>Titolo: {{ details.name }}</div>
+        <div>Titolo originale: {{ details.original_name }}</div>
         <div>
             Lingua:
             <span v-if="pngFlag.includes(details.original_language)">
@@ -14,7 +14,7 @@
 </template>
 <script>
 export default {
-    name: "Movie",
+    name: "Series",
     data: function() {
         return {
             pngFlag: ['it', 'en']
@@ -26,7 +26,7 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-.movie {
+.series {
     margin: 20px;
     border: 1px solid black;
     width: 342px;
