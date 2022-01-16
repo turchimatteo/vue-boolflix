@@ -6,19 +6,19 @@
         </div>
         <h2>Serie:</h2>
         <div class="series">
-            <Series v-for="series in seriesList" :key="series.id" :details="series"/>
+            <Movie v-for="series in seriesList" :key="series.id" :details="series"/>
         </div>
     </main>
 </template>
 <script>
 import Movie from "./Movie.vue"
-import Series from "./Series.vue"
+/* import Series from "./Series.vue" */
 
 export default {
     name: "Main",
     components: {
         Movie,
-        Series
+        /* Series */
     },
     props: {
         movieList: Array,
